@@ -5,6 +5,7 @@ import axios from "axios";
 import {useEffect, useState} from "react";
 import {OrderSummary} from "./OrderSummary.jsx";
 import {PaymentSummary} from "./PaymentSummary.jsx";
+import {BrandMark} from "../../components/BrandMark.jsx";
 
 export function CheckoutPage({cart = [],loadCart}) {
     const [deliveryOptions, setDeliveryOptions] = useState([]);
@@ -26,14 +27,12 @@ export function CheckoutPage({cart = [],loadCart}) {
     }, [cart]);
     return (
          <>
-            <title>Checkout Page </title>
+            <title>SERVIFY CAMPUS | Checkout</title>
             <div className="checkout-header">
                 <div className="header-content">
                     <div className="checkout-header-left-section">
-                        <Link to="/">
-
-                            <img className="logo" src="/images/logo.png"/>
-                            <img className="mobile-logo" src="/images/mobile-logo.png"/>
+                        <Link to="/" className="brand-link" aria-label="SERVIFY CAMPUS home">
+                            <BrandMark/>
                         </Link>
                     </div>
 

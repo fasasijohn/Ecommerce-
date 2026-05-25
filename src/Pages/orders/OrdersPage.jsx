@@ -20,7 +20,7 @@ export function OrdersPage({cart}) {
     return (
         <>
 
-            <title>Orders</title>
+            <title>SERVIFY CAMPUS | Orders</title>
             <Header cart={cart}/>
 <div className="orders-page">
                 <div className="page-title">Your Orders</div>

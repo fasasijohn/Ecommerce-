@@ -3,7 +3,7 @@ import {Header} from '../../components/Header.jsx';
 export function TrackingPage({cart}) {
     return(
         <>
-            <title>Tracking</title>
+            <title>SERVIFY CAMPUS | Tracking</title>
 
             <Header cart={cart}/>
 

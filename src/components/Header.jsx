@@ -1,4 +1,5 @@
 import './header.css';
+import {BrandMark} from './BrandMark.jsx';
 import {Link} from 'react-router';
 export  function Header({cart=[]}) {
 
@@ -11,11 +12,8 @@ export  function Header({cart=[]}) {
         <>
             <div className="header">
                 <div className="left-section">
-                    <Link to="/" className="header-link">
-                        <img className="logo"
-                             src="images/logo-white.png"/>
-                        <img className="mobile-logo"
-                             src="images/mobile-logo-white.png"/>
+                    <Link to="/" className="header-link brand-link" aria-label="SERVIFY CAMPUS home">
+                        <BrandMark/>
                     </Link>
                 </div>
 

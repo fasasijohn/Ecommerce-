@@ -1,5 +1,5 @@
 .header {
-  background-color: rgb(8, 79, 45);
+  background-color: rgb(41, 80, 213);
   color: white;
   padding-left: 15px;
   padding-right: 15px;
@@ -13,10 +13,13 @@
   left: 0;
   right: 0;
   height: 60px;
+  gap: 12px;
 }
 
 .header .left-section {
-  width: 208px;
+  width: 248px;
+  min-width: 0;
+  flex-shrink: 0;
 }
 
 @media (max-width: 800px) {
@@ -38,30 +41,18 @@
   border: 1px solid white;
 }
 
-.header .logo {
-  height: 26px;
-  margin-top: 1px;
-}
-
-.header .mobile-logo {
-  display: none;
-}
-
-@media (max-width: 675px) {
-  .header .logo {
-    display: none;
-  }
-
-  .header .mobile-logo {
-    display: block;
-    height: 26px;
-    margin-top: 1px;
-  }
+.header .brand-link {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .header .middle-section {
   flex: 1;
   max-width: 850px;
+  min-width: 0;
   margin-left: 10px;
   margin-right: 10px;
   display: flex;
@@ -81,7 +72,7 @@
 }
 
 .header .search-button {
-  background-color: rgb(186, 255, 190);
+  background-color: rgb(118, 157, 232);
   border: none;
   width: 45px;
   height: 40px;
@@ -136,7 +127,7 @@
 }
 
 .header .cart-quantity {
-  color: rgb(8, 79, 45);
+  color: rgb(26, 55, 158);
   font-size: 14px;
   font-weight: 700;
 
@@ -146,4 +137,14 @@
 
   width: 26px;
   text-align: center;
+}
+
+@media (max-width: 575px) {
+  .header .orders-link {
+    display: none;
+  }
+
+  .header .right-section {
+    width: auto;
+  }
 }

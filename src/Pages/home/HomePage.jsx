@@ -23,7 +23,7 @@ export function HomePage({cart, loadCart}) {
         getHomeData();
     },[ ]);
     return (<>
-    <title> HomePage</title>
+    <title>SERVIFY CAMPUS</title>
     <Header cart={cart}/>
     <div className="home-page">
         <ProductGrid products={products} loadCart={loadCart}/>

@@ -2,7 +2,7 @@
   height: 60px;
   padding-left: 30px;
   padding-right: 30px;
-  background-color: white;
+  background-color: #4359cd;
 
   display: flex;
   justify-content: center;
@@ -23,34 +23,28 @@
 }
 
 .checkout-header .checkout-header-left-section {
-  width: 200px;
+  width: 248px;
+  min-width: 0;
+  flex-shrink: 0;
 }
 
-.checkout-header .logo {
-  height: 26px;
-  margin-top: 0px;
+.checkout-header .brand-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 2px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
 }
 
-.checkout-header .mobile-logo {
-  display: none;
+.checkout-header .brand-link:hover {
+  border-color: white;
 }
 
-/* @media is used to create responsive design (making the
-   website look good on any screen size). This @media
-   means when the screen width is 575px or less, different
-   styles (inside the {...}) will be applied. */
 @media (max-width: 575px) {
   .checkout-header .checkout-header-left-section {
     width: auto;
-  }
-
-  .checkout-header .logo {
-    display: none;
-  }
-
-  .checkout-header .mobile-logo {
-    display: inline-block;
-    height: 26px;
   }
 }
 
@@ -67,7 +61,7 @@
 }
 
 .checkout-header .return-to-home-link {
-  color: rgb(25, 135, 84);
+  color: rgb(153, 169, 244);
 
   text-decoration: none;
   cursor: pointer;
