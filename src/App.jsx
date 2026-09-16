@@ -13,7 +13,7 @@ function App() {
 
     const loadCart = useCallback(async () => {
         const response=
-            await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/products`);
+            await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/cart-items?expand=product`);
         setCart(response.data);
     }, []);
 

@@ -26,7 +26,9 @@ export const OrderSummary = ({deliveryOptions, cart,loadCart}) => {
                     <div key={carts.productId} className="cart-item-container">
                         <div className="delivery-date">
                             Delivery
-                            date: {dayjs(selectedDeliveryOption.estimatedDeliveryTimeMs).format('dddd,MMMM, YYYY')}
+                            date: {selectedDeliveryOption?.estimatedDeliveryTimeMs
+                            ? dayjs(selectedDeliveryOption.estimatedDeliveryTimeMs).format('dddd, MMMM, YYYY')
+                            : 'Select a delivery option'}
                         </div>
 
                         <div className="cart-item-details-grid">
