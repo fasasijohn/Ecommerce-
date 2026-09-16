@@ -1,6 +1,7 @@
 import './header.css';
 import {BrandMark} from './BrandMark.jsx';
 import {Link} from 'react-router';
+import {publicAsset} from '../config/deployment.js';
 export  function Header({cart=[]}) {
 
     let totalQuantity=0;
@@ -21,7 +22,7 @@ export  function Header({cart=[]}) {
                     <input className="search-bar" type="text" placeholder="Search"/>
 
                     <button className="search-button">
-                        <img className="search-icon" src="images/icons/search-icon.png"/>
+                        <img className="search-icon" src={publicAsset('images/icons/search-icon.png')}/>
                     </button>
                 </div>
 
@@ -32,7 +33,7 @@ export  function Header({cart=[]}) {
                     </Link>
 
                     <Link className="cart-link header-link" to="/checkout">
-                        <img className="cart-icon" src="images/icons/cart-icon.png"/>
+                        <img className="cart-icon" src={publicAsset('images/icons/cart-icon.png')}/>
                         <div className="cart-quantity">{totalQuantity}</div>
                         <div className="cart-text">Cart</div>
                     </Link>

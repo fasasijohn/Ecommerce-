@@ -2,6 +2,7 @@ import {formatMoney} from "../../utils/money.jsx";
 import dayjs from "dayjs";
 import {DeliveryOptions} from "./DeliveryOptions.jsx";
 import axios from "axios";
+import {publicAsset} from "../../config/deployment.js";
 
 export const OrderSummary = ({deliveryOptions, cart,loadCart}) => {
     return (
@@ -30,7 +31,7 @@ export const OrderSummary = ({deliveryOptions, cart,loadCart}) => {
 
                         <div className="cart-item-details-grid">
                             <img className="product-image"
-                                 src={carts.product.image}/>
+                                 src={publicAsset(carts.product.image)}/>
 
                             <div className="cart-item-details">
                                 <div className="product-name">

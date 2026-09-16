@@ -5,21 +5,22 @@ import './index.css';
 import {CheckoutPage} from "./Pages/checkout/CheckoutPage.jsx";
 import {OrdersPage} from "./Pages/orders/OrdersPage.jsx";
 import {TrackingPage} from "./Pages/tracking/TrackingPage.jsx";
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import axios from "axios";
 
 function App() {
     const [cart,setCart]=useState([]);
 
-    const  loadCart =async ()=>{
+    const loadCart = useCallback(async () => {
         const response=
             await axios.get('/api/cart-items?expand=product');
         setCart(response.data);
-    };
+    }, []);
 
   useEffect(()=>{
-      loadCart();
-  },[]);
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      void loadCart();
+  },[loadCart]);
 
   return (
 

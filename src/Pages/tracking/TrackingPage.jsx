@@ -1,5 +1,7 @@
 import './tracking.css';
 import {Header} from '../../components/Header.jsx';
+import {Link} from "react-router";
+import {publicAsset} from "../../config/deployment.js";
 export function TrackingPage({cart}) {
     return(
         <>
@@ -9,9 +11,9 @@ export function TrackingPage({cart}) {
 
             <div className="tracking-page">
                 <div className="order-tracking">
-                    <a className="back-to-orders-link link-primary" href="/orders">
+                    <Link className="back-to-orders-link link-primary" to="/orders">
                         View all orders
-                    </a>
+                    </Link>
 
                     <div className="delivery-date">
                         Arriving on Monday, June 13
@@ -25,7 +27,7 @@ export function TrackingPage({cart}) {
                         Quantity: 1
                     </div>
 
-                    <img className="product-image" src="images/products/athletic-cotton-socks-6-pairs.jpg"/>
+                    <img className="product-image" src={publicAsset('images/products/athletic-cotton-socks-6-pairs.jpg')}/>
 
                     <div className="progress-labels-container">
                         <div className="progress-label">

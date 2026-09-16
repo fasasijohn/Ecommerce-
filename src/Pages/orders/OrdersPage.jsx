@@ -4,6 +4,8 @@ import {useState, useEffect, Fragment} from "react";
 import axios from "axios";
 import dayjs from "dayjs";
 import {formatMoney} from "../../utils/money.jsx";
+import {Link} from "react-router";
+import {publicAsset} from "../../config/deployment.js";
 export function OrdersPage({cart}) {
     const [orders,setOrders]=useState([]);
 
@@ -55,7 +57,7 @@ export function OrdersPage({cart}) {
                                             return(
                                                 <Fragment key={orderProduct.product.id}>
                                                     <div className="product-image-container">
-                                                        <img src={orderProduct.product.image}/>
+                                                        <img src={publicAsset(orderProduct.product.image)}/>
                                                     </div>
 
                                                     <div className="product-details">
@@ -70,17 +72,17 @@ export function OrdersPage({cart}) {
                                                             Quantity: {orderProduct.quantity}
                                                         </div>
                                                         <button className="buy-again-button button-primary">
-                                                            <img className="buy-again-icon" src="images/icons/buy-again.png"/>
+                                                            <img className="buy-again-icon" src={publicAsset('images/icons/buy-again.png')}/>
                                                             <span className="buy-again-message">Add to Cart</span>
                                                         </button>
                                                     </div>
 
                                                     <div className="product-actions">
-                                                        <a href="/tracking">
+                                                        <Link to="/tracking">
                                                             <button className="track-package-button button-secondary">
                                                                 Track package
                                                             </button>
-                                                        </a>
+                                                        </Link>
                                                     </div>
 
                                                 </Fragment>

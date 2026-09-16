@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {formatMoney} from "../../utils/money.jsx";
 import axios from "axios";
+import {publicAsset} from "../../config/deployment.js";
 
 export const Product = ({product,loadCart}) => {
     const [quantity,setQuantity] = useState(1);
@@ -27,7 +28,7 @@ export const Product = ({product,loadCart}) => {
             <div className="product-image-container">
                 <img className="product-image"
                      data-testid="product-image"
-                     src={product.image}/>
+                     src={publicAsset(product.image)}/>
             </div>
 
             <div className="product-name limit-text-to-2-lines">
@@ -37,7 +38,7 @@ export const Product = ({product,loadCart}) => {
             <div className="product-rating-container">
                 <img className="product-rating-stars"
                      data-testid="product-rating-star"
-                     src={`/images/ratings/rating-${product.rating.stars * 10}.png`}/>
+                     src={publicAsset(`images/ratings/rating-${product.rating.stars * 10}.png`)}/>
                 <div className="product-rating-count link-primary">
                     {product.rating.count}
                 </div>
@@ -66,7 +67,7 @@ export const Product = ({product,loadCart}) => {
             <div className="product-spacer"></div>
 
             <div className="added-to-cart">
-                <img src="images/icons/checkmark.png"/>
+                <img src={publicAsset('images/icons/checkmark.png')}/>
                 Added
             </div>
 

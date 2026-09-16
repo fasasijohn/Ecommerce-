@@ -1,7 +1,6 @@
 import { it ,expect,describe, vi,beforeEach} from 'vitest';
 import {HomePage} from "./HomePage.jsx";
 import {render,screen,within} from "@testing-library/react";
-import userEvent from '@testing-library/user-event';
 import {MemoryRouter} from "react-router";
 import axios from "axios";
 vi.mock('axios');

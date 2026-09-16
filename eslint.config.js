@@ -5,9 +5,18 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', 'ecommerce-backend-ai', 'src/dev']),
   {
-    files: ['**/*.{js,jsx}'],
+    files: ['vite.config.js', 'vitest.config.js'],
+    extends: [
+      js.configs.recommended,
+    ],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
+  {
+    files: ['src/**/*.{js,jsx}', 'setupTests.js'],
     extends: [
       js.configs.recommended,
       reactHooks.configs.flat.recommended,

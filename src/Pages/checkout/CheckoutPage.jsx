@@ -6,6 +6,7 @@ import {useEffect, useState} from "react";
 import {OrderSummary} from "./OrderSummary.jsx";
 import {PaymentSummary} from "./PaymentSummary.jsx";
 import {BrandMark} from "../../components/BrandMark.jsx";
+import {publicAsset} from "../../config/deployment.js";
 
 export function CheckoutPage({cart = [],loadCart}) {
     const [deliveryOptions, setDeliveryOptions] = useState([]);
@@ -45,7 +46,7 @@ export function CheckoutPage({cart = [],loadCart}) {
                     </div>
 
                     <div className="checkout-header-right-section">
-                        <img src="/images/icons/checkout-lock-icon.png"/>
+                        <img src={publicAsset('images/icons/checkout-lock-icon.png')}/>
                     </div>
                 </div>
             </div>
