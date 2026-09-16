@@ -3,6 +3,7 @@ services:
     name: servify-campus-api
     runtime: node
     rootDir: ecommerce-backend-ai
+    plan: free
     buildCommand: npm ci
     startCommand: npm start
     healthCheckPath: /health
