@@ -14,7 +14,7 @@ export const OrderSummary = ({deliveryOptions, cart,loadCart}) => {
 
                     });
                 const deleteCartItem = async () => {
-                  await axios.delete(`/api/cart-items/${carts.productId}`)
+                    await axios.delete(`${import.meta.env.VITE_API_BASE_URL}/api/cart-items/${carts.productId}`)
                     await loadCart();
 
 

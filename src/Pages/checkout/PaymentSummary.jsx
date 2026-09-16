@@ -5,7 +5,7 @@ import {useNavigate} from "react-router";
 export const PaymentSummary = ({paymentSummary,loadCart}) => {
    const navigate=useNavigate();
    const createOrder = async () => {
-     await axios.post('/api/orders');
+     await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/orders`);
      await loadCart();
      navigate('/orders');
     }
